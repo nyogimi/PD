@@ -1,0 +1,92 @@
+.screen-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 1280px;
+  height: 720px;
+}
+.welcome {
+  margin: 0;
+}
+.welcome-conversational-ai-container {
+  position: absolute;
+  top: 165px;
+  left: calc(50% - 407px);
+  font-weight: 800;
+  color: #000;
+  white-space: pre-wrap;
+  display: inline-block;
+  width: 814px;
+  height: 132px;
+  text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
+}
+.home-child {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  background-color: #353535;
+  width: 1280px;
+  height: 90px;
+}
+.health-kiosk {
+  position: absolute;
+  top: 21px;
+  left: 140px;
+  font-weight: 900;
+  text-align: left;
+  display: inline-block;
+  width: 564px;
+  height: 51px;
+}
+.speech-language-therapy-icon {
+  position: absolute;
+  top: 4px;
+  left: 46px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.group-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: #1e1e1e;
+  width: 400px;
+  height: 201px;
+}
+.click-or-speak-container,
+.click-or-speak-to-start-wrapper {
+  position: absolute;
+  left: calc(50% - 177px);
+  width: 354px;
+  height: 95px;
+}
+.click-or-speak-container {
+  top: 0;
+  font-weight: 800;
+  display: inline-block;
+}
+.click-or-speak-to-start-wrapper {
+  top: 53px;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 449px;
+  left: 440px;
+  width: 400px;
+  height: 201px;
+  cursor: pointer;
+  font-size: 40px;
+}
+.home {
+  position: relative;
+  width: 100%;
+  height: 729px;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  font-family: Inter;
+}
