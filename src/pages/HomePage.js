@@ -14,9 +14,8 @@ const HomePage = () => {
       <div className="screen-1" />
       <div className="welcome-conversational-ai-container">
         <p className="welcome">WELCOME</p>
-        <p className="welcome">
-          CONVERSATIONAL AI SELF-SERVICE HEALTH KIOSK FOR VISUALLY-IMPAIRED
-        </p>
+        <p className="welcome">{`CONVERSATIONAL AI `}</p>
+        <p className="welcome">{`SELF-SERVICE HEALTH KIOSK  `}</p>
       </div>
       <div className="home-child" />
       <div className="health-kiosk">Health Kiosk</div>

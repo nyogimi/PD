@@ -1,0 +1,151 @@
+.screen-11,
+.screen-6-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 1280px;
+  height: 720px;
+}
+.screen-6-child {
+  top: -1px;
+  background-color: #353535;
+  height: 90px;
+}
+.health-kiosk1 {
+  position: absolute;
+  top: 21px;
+  left: 140px;
+  font-weight: 900;
+  color: #fff;
+  display: inline-block;
+  width: 564px;
+  height: 51px;
+}
+.speech-language-therapy-icon1 {
+  position: absolute;
+  top: 4px;
+  left: 46px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.p {
+  margin: 0;
+}
+.result-temp {
+  position: absolute;
+  top: 246px;
+  left: 57px;
+  font-weight: 500;
+  display: inline-block;
+  width: 121.5px;
+  height: 76.1px;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #00b3ff;
+  width: 243px;
+  height: 231.6px;
+}
+.thermometer-icon {
+  position: absolute;
+  top: 22.7px;
+  left: 54.2px;
+  width: 135.6px;
+  height: 129.2px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.temperature {
+  position: absolute;
+  top: 161px;
+  left: 46px;
+  font-weight: 500;
+  display: inline-block;
+  width: 152px;
+  height: 25px;
+}
+.result-temp-parent,
+.temp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 243px;
+  height: 231.6px;
+  text-align: left;
+  font-size: 24px;
+}
+.result-temp-parent {
+  top: 254px;
+  left: 522px;
+  height: 322.1px;
+  text-align: center;
+  font-size: 32px;
+}
+.group-item {
+  position: absolute;
+  top: 94.7px;
+  left: 4px;
+  width: 14px;
+  height: 0;
+  object-fit: contain;
+}
+.group-icon,
+.group-inner {
+  position: absolute;
+  top: 0;
+  left: 1144.9px;
+  width: 83.3px;
+  height: 84.4px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.group-icon {
+  top: 3.2px;
+  left: 4px;
+  object-fit: contain;
+}
+.done-press-2-container,
+.previous-press-1-container {
+  position: absolute;
+  top: 89px;
+  left: 1153.9px;
+  font-weight: 900;
+  display: inline-block;
+  width: 71px;
+  height: 17px;
+}
+.previous-press-1-container {
+  top: 91px;
+  left: 0;
+  width: 90px;
+}
+.vector-parent {
+  position: absolute;
+  top: 589px;
+  left: 26px;
+  width: 1228.2px;
+  height: 108px;
+  text-align: center;
+  font-size: 16px;
+}
+.vital-signs-result {
+  position: absolute;
+  top: 124px;
+  left: 491px;
+  font-weight: 900;
+}
+.screen-6 {
+  position: relative;
+  width: 100%;
+  height: 729px;
+  text-align: left;
+  font-size: 36px;
+  color: #000;
+  font-family: Inter;
+}

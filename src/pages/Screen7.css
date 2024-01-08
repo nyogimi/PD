@@ -1,0 +1,152 @@
+.screen-12,
+.screen-7-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 1280px;
+  height: 720px;
+}
+.screen-7-child {
+  top: -1px;
+  background-color: #353535;
+  height: 90px;
+}
+.health-kiosk2 {
+  position: absolute;
+  top: 21px;
+  left: 140px;
+  font-weight: 900;
+  color: #fff;
+  display: inline-block;
+  width: 564px;
+  height: 51px;
+}
+.speech-language-therapy-icon2 {
+  position: absolute;
+  top: 4px;
+  left: 46px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.p1 {
+  margin: 0;
+}
+.result-temp1 {
+  top: 247.8px;
+  left: 64.9px;
+  font-weight: 500;
+  display: inline-block;
+  width: 114.8px;
+  height: 74.3px;
+}
+.circle1,
+.o2,
+.result-temp1 {
+  position: absolute;
+}
+.circle1 {
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #edf200;
+  width: 243px;
+  height: 226.1px;
+}
+.o2 {
+  top: 160px;
+  left: 40px;
+  font-weight: 500;
+  display: inline-block;
+  width: 163px;
+  height: 29px;
+}
+.o2-sat-child {
+  position: absolute;
+  top: 34.1px;
+  left: 48.3px;
+  width: 148.1px;
+  height: 125.4px;
+  object-fit: cover;
+}
+.o2-sat,
+.result-temp-group {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 243px;
+  height: 226.1px;
+  text-align: left;
+  font-size: 24px;
+}
+.result-temp-group {
+  top: 234px;
+  left: 518px;
+  height: 322.1px;
+  text-align: center;
+  font-size: 32px;
+}
+.vector-icon {
+  position: absolute;
+  top: 94.7px;
+  left: 4px;
+  width: 14px;
+  height: 0;
+  object-fit: contain;
+}
+.group-child1,
+.group-child2 {
+  position: absolute;
+  top: 0;
+  left: 1144.9px;
+  width: 83.3px;
+  height: 84.4px;
+  object-fit: cover;
+}
+.group-child2 {
+  top: 3.2px;
+  left: 4px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.done-press-2-container1,
+.previous-press-1-container1 {
+  position: absolute;
+  top: 89px;
+  left: 1153.9px;
+  font-weight: 900;
+  display: inline-block;
+  width: 71px;
+  height: 17px;
+}
+.previous-press-1-container1 {
+  top: 91px;
+  left: 0;
+  width: 90px;
+}
+.vector-group {
+  position: absolute;
+  top: 589px;
+  left: 24px;
+  width: 1228.2px;
+  height: 108px;
+  text-align: center;
+  font-size: 16px;
+}
+.vital-signs-result1 {
+  position: absolute;
+  top: 124px;
+  left: 491px;
+  font-weight: 900;
+}
+.screen-7 {
+  position: relative;
+  width: 100%;
+  height: 729px;
+  text-align: left;
+  font-size: 36px;
+  color: #000;
+  font-family: Inter;
+}

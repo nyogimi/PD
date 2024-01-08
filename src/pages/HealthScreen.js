@@ -9,57 +9,52 @@ const HealthScreen = () => {
     navigate("/");
   }, [navigate]);
 
-  const onGroupClick = useCallback(() => {
-    navigate("/screen-4");
-  }, [navigate]);
-
-  const onGroupImageClick = useCallback(() => {
-    navigate("/screen-2");
+  const onGroupContainer2Click = useCallback(() => {
+    navigate("/screen-1");
   }, [navigate]);
 
   return (
     <div className="screen-3">
-      <div className="screen-13" />
-      <div className="screen-13" />
-      <div className="rectangle-container">
-        <div className="group-child4" />
-        <div className="please-put-your2">
-          PLEASE PUT YOUR LEFT INDEX FINGER INSIDE THE PULSE OXIMETER FOR 1
-          MINUTE TO MEASURE YOUR HEART RATE
+      <div className="screen-15" />
+      <div className="screen-15" />
+      <div className="rectangle-group">
+        <div className="group-child8" />
+        <div className="please-put-your-container1">
+          <p className="please-put-your1">
+            PLEASE PUT YOUR FOREHEAD NEAR THE KIOSK TO DETECT THE TEMPERATURE
+          </p>
+          <p className="please-put-your1">&nbsp;</p>
+          <p className="please-put-your1">&nbsp;</p>
+          <p className="please-put-your1">&nbsp;</p>
+          <p className="please-put-your1">PRESS 3 TO START</p>
         </div>
       </div>
       <div className="screen-3-child" />
-      <div className="health-kiosk3">Health Kiosk</div>
+      <div className="health-kiosk5">Health Kiosk</div>
       <img
-        className="speech-language-therapy-icon3"
+        className="speech-language-therapy-icon5"
         alt=""
         src="/speech-language-therapy@2x.png"
       />
-      <div className="home-container" onClick={onGroupContainer1Click}>
-        <div className="home3">Home</div>
-        <img className="vector-icon2" alt="" src="/vector@2x.png" />
-      </div>
-      <div className="group-div">
-        <img className="group-child5" alt="" src="/vector-9@2x.png" />
-        <img
-          className="group-child6"
-          alt=""
-          src="/group-18@2x.png"
-          onClick={onGroupClick}
-        />
-        <img
-          className="group-child7"
-          alt=""
-          src="/group-19@2x.png"
-          onClick={onGroupImageClick}
-        />
-        <div className="continue1">CONTINUE</div>
-        <div className="back2">BACK</div>
-      </div>
       <div className="temp1">
         <div className="circle6" />
         <img className="thermometer-icon1" alt="" src="/thermometer1@2x.png" />
         <div className="temperature1">Temperature</div>
+      </div>
+      <div className="home-press-4-group" onClick={onGroupContainer1Click}>
+        <div className="home-press-4-container1">
+          <p className="please-put-your1">Home</p>
+          <p className="please-put-your1">Press 4</p>
+        </div>
+        <img className="vector-icon2" alt="" src="/vector1@2x.png" />
+      </div>
+      <div className="vector-parent2" onClick={onGroupContainer2Click}>
+        <img className="group-child9" alt="" src="/vector-9@2x.png" />
+        <img className="group-child10" alt="" src="/group-19@2x.png" />
+        <div className="previous-press-1-container4">
+          <p className="please-put-your1">PREVIOUS</p>
+          <p className="please-put-your1">PRESS 1</p>
+        </div>
       </div>
     </div>
   );

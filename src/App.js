@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import Screen6 from "./pages/Screen6";
+import Screen7 from "./pages/Screen7";
 import MainScreen1 from "./pages/MainScreen1";
 import MainScreen2 from "./pages/MainScreen2";
 import HealthScreen from "./pages/HealthScreen";
@@ -29,6 +31,14 @@ function App() {
 
     switch (pathname) {
       case "/":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/screen-6":
+        title = "";
+        metaDescription = "";
+        break;
+      case "/screen-7":
         title = "";
         metaDescription = "";
         break;
@@ -71,6 +81,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/screen-6" element={<Screen6 />} />
+      <Route path="/screen-7" element={<Screen7 />} />
       <Route path="/screen-5" element={<MainScreen1 />} />
       <Route path="/screen-4" element={<MainScreen2 />} />
       <Route path="/screen-3" element={<HealthScreen />} />

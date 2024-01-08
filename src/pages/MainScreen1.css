@@ -1,4 +1,5 @@
-.screen-11 {
+.screen-13,
+.screen-5-child {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,42 +7,22 @@
   width: 1280px;
   height: 720px;
 }
-.p {
-  margin: 0;
-}
-.result-temp,
-.result-temp1 {
-  position: absolute;
-  top: 414px;
-  left: 159px;
-  font-size: 20px;
-  font-weight: 500;
-}
-.result-temp1 {
-  top: 409px;
-  left: 386px;
-  text-align: center;
-}
 .screen-5-child {
-  position: absolute;
   top: -1px;
-  left: 0;
   background-color: #353535;
-  width: 1280px;
   height: 90px;
 }
-.health-kiosk1 {
+.health-kiosk3 {
   position: absolute;
   top: 21px;
   left: 140px;
-  font-size: 36px;
   font-weight: 900;
   color: #fff;
   display: inline-block;
   width: 564px;
   height: 51px;
 }
-.speech-language-therapy-icon1 {
+.speech-language-therapy-icon3 {
   position: absolute;
   top: 4px;
   left: 46px;
@@ -50,156 +31,58 @@
   overflow: hidden;
   object-fit: cover;
 }
-.home1 {
-  position: absolute;
-  top: 12.8px;
-  left: 62px;
-  font-weight: 500;
-  display: inline-block;
-  width: 59px;
-  height: 20px;
-}
-.vector-icon {
-  position: absolute;
-  height: 100%;
-  width: 37.19%;
-  top: 0;
-  right: 62.81%;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-.home-parent {
-  position: absolute;
-  top: 19.2px;
-  left: 1115px;
-  width: 121px;
-  height: 45.6px;
-  cursor: pointer;
-  font-size: 20px;
-  color: #d7d7d7;
-}
-.group-item {
+.group-child3 {
   position: absolute;
   top: 94.7px;
-  left: 0;
+  left: 4px;
   width: 14px;
   height: 0;
   object-fit: contain;
 }
-.group-icon,
-.group-inner {
+.group-child4,
+.group-child5 {
   position: absolute;
   top: 0;
-  left: 1140.9px;
+  left: 1144.9px;
   width: 83.3px;
   height: 84.4px;
   object-fit: cover;
   cursor: pointer;
 }
-.group-icon {
+.group-child5 {
   top: 3.2px;
-  left: 0;
+  left: 4px;
   object-fit: contain;
 }
-.back,
-.done {
+.done-press-2-container2,
+.previous-press-1-container2 {
   position: absolute;
   top: 89px;
-  left: 1158.9px;
+  left: 1153.9px;
   font-weight: 900;
   display: inline-block;
-  width: 47px;
+  width: 71px;
   height: 17px;
 }
-.back {
-  top: 91.1px;
-  left: 18.9px;
-  width: 64px;
-  height: 16.9px;
+.previous-press-1-container2 {
+  top: 91px;
+  left: 0;
+  width: 90px;
 }
-.vector-parent {
+.vector-container {
   position: absolute;
-  top: 612px;
-  left: 28.1px;
-  width: 1224.2px;
+  top: 589px;
+  left: 24px;
+  width: 1228.2px;
   height: 108px;
+  text-align: center;
+  font-size: 16px;
 }
-.vital-signs-result {
+.vital-signs-result2 {
   position: absolute;
-  top: 139px;
-  left: 471px;
-  font-size: 36px;
+  top: 124px;
+  left: 491px;
   font-weight: 900;
-}
-.circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  background-color: #00b3ff;
-  width: 146px;
-  height: 146px;
-}
-.thermometer-icon {
-  position: absolute;
-  top: 14.3px;
-  left: 32.6px;
-  width: 81.5px;
-  height: 81.5px;
-  overflow: hidden;
-  object-fit: cover;
-}
-.temperature {
-  position: absolute;
-  top: 100px;
-  left: 23px;
-  font-weight: 500;
-  display: inline-block;
-  width: 100px;
-  height: 16px;
-}
-.temp {
-  top: 249px;
-  left: 126px;
-  width: 146px;
-  height: 146px;
-}
-.circle1,
-.o2,
-.temp {
-  position: absolute;
-}
-.circle1 {
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  background-color: #edf200;
-  width: 146px;
-  height: 146px;
-}
-.o2 {
-  top: 103px;
-  left: 20px;
-  font-weight: 500;
-}
-.o2-sat-child {
-  position: absolute;
-  top: 22px;
-  left: 29px;
-  width: 89px;
-  height: 81px;
-  object-fit: cover;
-}
-.o2-sat {
-  position: absolute;
-  top: 249px;
-  left: 349px;
-  width: 146px;
-  height: 146px;
 }
 .circle2,
 .rectangle-icon {
@@ -209,39 +92,46 @@
 }
 .rectangle-icon {
   border-radius: 50px;
-  width: 542px;
-  height: 258px;
+  width: 779px;
+  height: 364px;
   object-fit: cover;
 }
 .circle2 {
   border-radius: 50%;
   background-color: #00ff85;
-  width: 146px;
-  height: 146px;
+  width: 209.8px;
+  height: 206px;
+}
+.mmhg {
+  margin: 0;
 }
 .diastolic {
   position: absolute;
-  top: 84px;
-  left: 31px;
+  top: 118.5px;
+  left: 44.6px;
   font-weight: 500;
   display: inline-block;
-  width: 84px;
+  width: 120.7px;
+  height: 80.4px;
 }
 .diastolic-2-child {
   position: absolute;
-  top: 17px;
-  left: 43px;
-  width: 59px;
-  height: 63px;
+  top: 24px;
+  left: 61.8px;
+  width: 84.8px;
+  height: 88.9px;
   object-fit: cover;
 }
 .circle3,
 .diastolic-2 {
   position: absolute;
-  top: 27px;
-  left: 366px;
-  width: 146px;
-  height: 146px;
+  width: 209.8px;
+  height: 206px;
+}
+.diastolic-2 {
+  top: 38.1px;
+  left: 526px;
+  font-size: 20px;
 }
 .circle3 {
   top: 0;
@@ -251,19 +141,22 @@
 }
 .systolic-2-child {
   position: absolute;
-  top: 17px;
-  left: 44px;
-  width: 59px;
-  height: 63px;
+  top: 24px;
+  left: 63.2px;
+  width: 84.8px;
+  height: 88.9px;
   object-fit: cover;
 }
 .circle4,
 .systolic-2 {
   position: absolute;
-  top: 32px;
-  left: 198px;
-  width: 146px;
-  height: 146px;
+  width: 209.8px;
+  height: 206px;
+}
+.systolic-2 {
+  top: 45.1px;
+  left: 284.6px;
+  font-size: 20px;
 }
 .circle4 {
   top: 0;
@@ -273,12 +166,12 @@
 }
 .heart-rate2-child {
   position: absolute;
-  height: 41.78%;
-  width: 43.15%;
+  height: 41.8%;
+  width: 43.14%;
   top: 25.34%;
-  right: 28.08%;
-  bottom: 32.88%;
-  left: 28.77%;
+  right: 28.07%;
+  bottom: 32.86%;
+  left: 28.79%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -287,52 +180,55 @@
 .heart-rate,
 .heart-rate2 {
   position: absolute;
-  left: 30px;
+  left: 43.1px;
 }
 .heart-rate {
-  top: 106px;
+  top: 149.6px;
   font-weight: 500;
   display: inline-block;
-  width: 87px;
-  height: 16px;
+  width: 125px;
+  height: 22.6px;
 }
 .heart-rate2 {
-  top: 32px;
-  width: 146px;
-  height: 146px;
+  top: 45.1px;
+  width: 209.8px;
+  height: 206px;
   text-align: left;
 }
 .result-temp2,
 .result-temp3,
 .result-temp4 {
   position: absolute;
-  top: 195px;
-  left: 371px;
-  font-size: 20px;
+  top: 275.1px;
+  left: 533.2px;
   font-weight: 500;
+  display: inline-block;
+  width: 194px;
+  height: 67.7px;
 }
 .result-temp3,
 .result-temp4 {
-  left: 203px;
+  left: 291.8px;
 }
 .result-temp4 {
-  top: 190px;
-  left: 35px;
+  top: 268.1px;
+  left: 50.3px;
 }
-.vector-group {
+.group-div {
   position: absolute;
-  top: 213px;
-  left: 594px;
-  width: 542px;
-  height: 258px;
+  top: 228px;
+  left: 250px;
+  width: 779px;
+  height: 364px;
   text-align: center;
+  font-size: 24px;
 }
 .screen-5 {
   position: relative;
   width: 100%;
   height: 729px;
   text-align: left;
-  font-size: 16px;
+  font-size: 36px;
   color: #000;
   font-family: Inter;
 }
