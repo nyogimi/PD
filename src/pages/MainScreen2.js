@@ -1,9 +1,10 @@
-import { useCallback } from "react";
+import React, { useEffect, useCallback, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MainScreen2.css";
 
 const MainScreen2 = () => {
   const navigate = useNavigate();
+  const screenRef = useRef(null);
 
   const onGroupContainer1Click = useCallback(() => {
     navigate("/");
@@ -11,6 +12,32 @@ const MainScreen2 = () => {
 
   const onGroupContainer2Click = useCallback(() => {
     navigate("/screen-1");
+  }, [navigate]);
+
+  const onGroupContainer3Click = useCallback(() => {
+    navigate("/screen-7");
+  }, [navigate]);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Check if the pressed key is the number 1, 3, or 4
+      if (event.key === '1') {
+        navigate("/screen-1");
+      } else if (event.key === '3') {
+        navigate("/screen-7");
+      } else if (event.key === '4') {
+        navigate("/");
+      }
+      // Add more conditions for other keys or screens as needed
+    };
+
+    // Add the event listener to the document
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [navigate]);
 
   return (
@@ -35,7 +62,7 @@ const MainScreen2 = () => {
       <div className="please-put-your-container">
         <p className="please-put-your">
           PLEASE PUT YOUR LEFT INDEX FINGER INSIDE THE PULSE OXIMETER FOR 1
-          MINUTE TO MEASURE YOUR HEART RATE
+          MINUTE TO MEASURE YOUR OXYGEN LEVEL
         </p>
         <p className="please-put-your">&nbsp;</p>
         <p className="please-put-your">&nbsp;</p>

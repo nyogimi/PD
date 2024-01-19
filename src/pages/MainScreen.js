@@ -1,4 +1,5 @@
-import { useCallback } from "react";
+// Import the necessary modules from 'react-router-dom'
+import { useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MainScreen.css";
 
@@ -20,6 +21,58 @@ const MainScreen = () => {
   const onGroupContainer1Click = useCallback(() => {
     navigate("/");
   }, [navigate]);
+
+  // Function to navigate to respective screens
+  const goToScreen3 = useCallback(() => {
+    navigate("/screen-3");
+  }, [navigate]);
+
+  const goToScreen4 = useCallback(() => {
+    navigate("/screen-4");
+  }, [navigate]);
+
+  const goToScreen2 = useCallback(() => {
+    navigate("/screen-2");
+  }, [navigate]);
+
+  const goToScreen5 = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+
+  // Use useEffect to add the event listener when the component mounts
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Check if the pressed key is the number 1
+      if (event.key === '1') {
+        // Redirect to Screen3.js
+        goToScreen3();
+      }
+      // Check if the pressed key is the number 2
+      else if (event.key === '2') {
+        // Redirect to Screen4.js
+        goToScreen4();
+      }
+      // Check if the pressed key is the number 3
+      else if (event.key === '3') {
+        // Redirect to Screen2.js
+        goToScreen2();        
+      }
+      // Check if the pressed key is the number 4
+      else if (event.key === '4') {
+        // Redirect to Screen5.js
+        goToScreen5();
+      }
+      // Add more conditions for other keys or screens as needed
+    };
+
+    // Add the event listener
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [goToScreen3, goToScreen4, goToScreen2, goToScreen5]);
 
   return (
     <div className="screen-17">
@@ -45,7 +98,7 @@ const MainScreen = () => {
       <div className="o2-sat2" onClick={onO2SatContainerClick}>
         <div className="circle9" />
         <div className="o22">
-          <p className="o2-saturation">O2 Saturation</p>
+          <p className="o2-saturation">Oxygen Level</p>
           <p className="o2-saturation">Press 2</p>
         </div>
         <img className="o2-sat-inner" alt="" src="/group-21@2x.png" />

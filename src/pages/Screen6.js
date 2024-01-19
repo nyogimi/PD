@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Screen6.css";
 
@@ -12,6 +12,28 @@ const Screen6 = () => {
   const onGroupImageClick = useCallback(() => {
     navigate("/screen-3");
   }, [navigate]);
+
+  const handleKeyPress = useCallback((event) => {
+    // Check if the pressed key is the number 1
+    if (event.key === '1') {
+      navigate("/screen-3");
+    }
+    // Check if the pressed key is the number 2
+    else if (event.key === '2') {
+      navigate("/");
+    }
+    // Add more conditions for other keys or screens as needed
+  }, [navigate]);
+
+  useEffect(() => {
+    // Add the event listener to handle key presses
+    document.addEventListener('keydown', handleKeyPress);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [handleKeyPress]);
 
   return (
     <div className="screen-6">

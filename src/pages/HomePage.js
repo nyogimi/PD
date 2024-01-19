@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 
@@ -7,6 +7,24 @@ const HomePage = () => {
 
   const onGroupContainer1Click = useCallback(() => {
     navigate("/screen-1");
+  }, [navigate]);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Check if the pressed key is the number 1
+      if (event.key === '1') {
+        navigate("/screen-1");
+      }
+      // Add more conditions for other keys or screens as needed
+    };
+
+    // Add the event listener to the document
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
   }, [navigate]);
 
   return (
@@ -28,8 +46,8 @@ const HomePage = () => {
         <div className="group-child" />
         <div className="click-or-speak-to-start-wrapper">
           <div className="click-or-speak-container">
-            <p className="welcome">{`CLICK OR `}</p>
-            <p className="welcome">SPEAK TO START</p>
+            <p className="welcome">{`TOUCH SCREEN OR `}</p>
+            <p className="welcome">PRESS 1 TO START</p>
           </div>
         </div>
       </div>
