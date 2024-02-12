@@ -12,7 +12,10 @@
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD:Frontend/package.json
     "react-icons": "^5.0.1",
+=======
+>>>>>>> e663ed303b566b2e295351a736c26e701f397d87:package.json
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
     "react-speech-recognition": "^3.10.0",
