@@ -1,7 +1,14 @@
 from flask import Flask, request, jsonify
 from time import sleep
 from flask_cors import CORS
-
+from langchain import PromptTemplate, HuggingFaceHub, LLMChain
+from langchain.vectorstores import Pinecone
+import pinecone
+from langchain.prompts import PromptTemplate
+from langchain.llms import CTransformers
+from langchain.chains import RetrievalQA
+from langchain.memory.buffer import ConversationBufferMemory
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)
