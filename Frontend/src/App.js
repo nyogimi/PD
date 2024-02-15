@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Selection1 from "./pages/Selection1";
 import Instruction from "./pages/Instruction";
 import TempData from "./pages/TempData";
+import Basic from "./components/Basic"; 
 
 function App() {
   const location = useLocation();
@@ -53,6 +54,7 @@ function App() {
       <Route path="/selection" element={<Selection1 />} />
       <Route path="/instruction" element={<Instruction />} />
       <Route path="/temp-data" element={<TempData />} />
+      <Route path="/basic" element={<Basic />} />
     </Routes>
   );
 }

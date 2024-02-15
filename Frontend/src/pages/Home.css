@@ -12,7 +12,7 @@
 .welcome-conversational-ai-container {
   position: absolute;
   top: 149px;
-  left: calc(26% - 407px);
+  left: calc(50% - 407px);
   font-weight: 800;
   color: #000;
   white-space: pre-wrap;

@@ -14,7 +14,7 @@ const TempData = () => {
   }, [navigate]);
 
   const onGroupClick = useCallback(() => {
-    navigate("/");
+    navigate("/Basic");
   }, [navigate]);
 
   useEffect(() => {
