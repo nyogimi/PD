@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosMic, IoMdSend } from 'react-icons/io';
-import { BiBot, BiUser } from 'react-icons/bi';
+import { BiBot, BiFontFamily, BiUser } from 'react-icons/bi';
 import DarkMode from './DarkMode/DarkMode';
 import bgImage from './Image/fadebg.png';
 import './chatBot.css';
+
 
 function Basic() {
   const [chat, setChat] = useState([]);
@@ -82,11 +83,12 @@ function Basic() {
     height: '14rem',
     overflowY: 'auto',
     overflowX: 'hidden',
-    backgroundImage: `url(${bgImage})`,
+    // backgroundImage: `url(${bgImage})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    color: 'white' // Text color
-  };
+    color: 'white', // Text color
+    fontFamily: 'Helvetica' // Replace "Your Font Name" with the desired font name
+};
 
   const styleTitle = {
     paddingTop: '10px',
@@ -94,6 +96,7 @@ function Basic() {
     backgroundColor: 'rgb(17, 15, 18)',
     marginBottom: '0px', // Added margin bottom for spacing
     color: 'white', // Text color
+   
   };
 
   const styleSendBtn = {
@@ -106,11 +109,11 @@ function Basic() {
 
   return (
     <div>
-      <DarkMode />
+      {/* <DarkMode /> */}
       <div className='Titlecontainer' style={{ width: '100%', margin: 'auto', boxSizing: 'border-box' }}>
         <div className='titlecard' style={styleTitle}>
           <div className='titleHeader text-white'>
-            <h1 style={{ textAlign: 'center' }}>Self-Service Health Kiosk</h1>
+            <h1 style={{ textAlign: 'center', fontWeight:'800', textShadow: '1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000' }}>Self-Service Health Kiosk</h1>
           </div>
         </div>
       </div>
