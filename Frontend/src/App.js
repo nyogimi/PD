@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Selection1 from "./pages/Selection1";
 import Instruction from "./pages/Instruction";
 import TempData from "./pages/TempData";
-import Basic from "./components/Basic"; 
+import Conversation from "./pages/Conversation";
 
 function App() {
   const location = useLocation();
@@ -43,6 +43,8 @@ function App() {
         return "YOU ARE NOW ON THE VITAL SIGNS SELECTION. MEASURE YOUR VITAL SIGNS BY SELECTING OPTIONS BELOW. TEMPERATURE: PRESS 2 TO MEASURE YOUR BODY TEMPERATURE. NOTE: IF YOU PRESS 1 AND 4, YOU CAN GO BACK TO THE HOME SCREEN";
       case "/temp-data":
         return "YOUR VITAL SIGN RESULT FOR TEMPERATURE: YOUR TEMPERATURE IS, 32, DEGREES CELSIUS, WHICH IS NORMAL. PRESS 1 TO GO BACK, AND THEN PRESS 3 TO GO TO CONVERSATIONAL AI.";
+      case "/conversation":
+        return "TALK TO THE CONVERSATIONAL AI BY PRESSING THE MIC BUTTON.";
       default:
         return "";
     }
@@ -54,7 +56,7 @@ function App() {
       <Route path="/selection" element={<Selection1 />} />
       <Route path="/instruction" element={<Instruction />} />
       <Route path="/temp-data" element={<TempData />} />
-      <Route path="/basic" element={<Basic />} />
+      <Route path="/conversation" element={<Conversation />} />
     </Routes>
   );
 }
