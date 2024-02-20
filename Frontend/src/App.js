@@ -1,83 +1,61 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Screen6 from "./pages/Tempresults";
-import Screen7 from "./pages/Screen7";
-import MainScreen1 from "./pages/MainScreen1";
-import MainScreen2 from "./pages/MainScreen2";
-import HealthScreen from "./pages/Tempscreen";
-import MainScreen3 from "./pages/MainScreen3";
-import MainScreen from "./pages/MainScreen";
-import Basic from "./components/Basic"
+import Home from "./pages/Home";
+import Selection1 from "./pages/Selection1";
+import Instruction from "./pages/Instruction";
+import TempData from "./pages/TempData";
+import Basic from "./components/Basic"; 
 
 function App() {
   const location = useLocation();
-  const pathname = location.pathname;
+  const [synth, setSynth] = useState(null);
+  const [utterance, setUtterance] = useState(null);
 
   useEffect(() => {
-    const synth = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance();
+    const synthInstance = window.speechSynthesis;
+    const utteranceInstance = new SpeechSynthesisUtterance();
+    setSynth(synthInstance);
+    setUtterance(utteranceInstance);
+  }, []);
 
-    // Function to read the content
-    const speakText = (text) => {
-      utterance.text = text;
-      synth.speak(utterance);
-    };
+  useEffect(() => {
+    if (synth && utterance) {
+      synth.cancel(); // Stop any ongoing speech synthesis
+      if (location.pathname !== "") {
+        // Speak text only if not on the home page
+        speakText(getContent(location.pathname));
+      }
+    }
+  }, [location.pathname, synth, utterance]);
 
-    // Text content for each page
-    let content = "";
+  const speakText = (text) => {
+    utterance.text = text;
+    synth.speak(utterance);
+  };
+
+  const getContent = (pathname) => {
     switch (pathname) {
       case "/":
-        content = "WELCOME !, THIS IS A CONVERSATIONAL AI, SELF-SERVICE HEALTH KIOSK. YOU CAN, TOUCH SCREEN OR PRESS 1 TO START";
-        break;
-      case "/screen-1":
-        content = "YOU ARE NOW ON, THE VITAL SIGNS SE LECTION. MEASURE YOUR VITAL SIGNS BY SELECTING OPTIONS BELOW. TEMPERATURE, PRESS 1. OXYGEN LEVEL, PRESS 2. HEART RATE, MMHG SYSTOLIC BP, AND MMHG DIASTOLIC BP, PRESS 3. AND YOU CAN GO BACK TO THE HOME PAGE BY, PRESSING 4. NOTE, Temperature and Oxygen level have their own individual sensors, while the Pulse Rate and Systolic & Diastolic Blood Pressure share the same sensor.";
-        break;
-      case "/screen-2":
-        content = "HEART RATE. PLEASE PUT YOUR RIGHT ARM ON THE DEDICATED ARM REST IN THE RIGHT OF THE KIOSK. PRESS 3 TO START. YOU CAN, GO BACK BY PRESSING 1, AND YOU CAN GO BACK TO THE HOME PAGE BY, PRESSING 4";
-        break;
-      case "/screen-3":
-        content = "TEMPERATURE. PLEASE PUT YOUR FOREHEAD NEAR THE KIOSK TO DETECT THE TEMPERATURE. PRESS 3 TO START, YOU CAN, GO BACK BY PRESSING 1, AND YOU CAN GO BACK TO THE HOME PAGE BY, PRESSING 4";
-        break;
-      case "/screen-4":
-        content = "OXYGEN LEVEL. PLEASE PUT YOUR, LEFT INDEX FINGER, INSIDE THE PULSE OXIMETER FOR, 1 MINUTE, TO MEASURE YOUR OXYGEN LEVEL. PRESS 3 TO START. YOU CAN, GO BACK BY PRESSING 1, AND YOU CAN GO BACK TO THE HOME PAGE BY, PRESSING 4";
-        break;
-      case "/screen-5":
-        content = "YOUR VITAL SIGN RESULT, FOR HEART RATE, YOUR HEART RATE IS,  114 BPM, WHICH IS ABOVE NORMAL, THEN YOU SYSTOLIC BP IS ONE HUNDRED TEN MMHG, WHICH IS ABOVE NORMAL, AND THEN YOUR DIASTOLIC BP IS, 120 MMHG, WHICH IS ABOVE NORMAL. YOU CAN, GO BACK BY PRESSING 1, AND YOU CAN GO BACK TO THE HOME PAGE BY, PRESSING 4 ";
-        break;
-      case "/screen-6":
-        content = "YOUR VITAL SIGN RESULT, FOR TEMPERATURE, YOUR TEMPERATURE is 32 DEGREES CELSIUS, WHICH IS, NORMAL. PRESS 1 TO GO BACK, AND THEN, PRESS TO IF YOU'RE DONE";
-        break;
-      case "/screen-7":
-        content = "YOUR VITAL SIGN RESULT, FOR OXYGEN LEVEL. YOUR  OXYGEN IS, 95 PERCENT, WHICH IS NORMAL, PRESS 1 TO GO BACK, AND THEN, PRESS TO IF YOU'RE DONE";
-        break;
+        return "WELCOME! THIS IS A CONVERSATIONAL AI, SELF-SERVICE HEALTH KIOSK. YOU CAN TOUCH SCREEN OR PRESS 1 TO START";
+      case "/instruction":
+        return "TEMPERATURE. PLEASE PUT YOUR INDEX FINGER NEAR THE KIOSK TO DETECT THE TEMPERATURE. PRESS 3 TO START. YOU CAN GO BACK BY PRESSING 1, AND YOU CAN GO BACK TO THE HOME PAGE BY PRESSING 4";
+      case "/selection":
+        return "YOU ARE NOW ON THE VITAL SIGNS SELECTION. MEASURE YOUR VITAL SIGNS BY SELECTING OPTIONS BELOW. TEMPERATURE: PRESS 2 TO MEASURE YOUR BODY TEMPERATURE. NOTE: IF YOU PRESS 1 AND 4, YOU CAN GO BACK TO THE HOME SCREEN";
+      case "/temp-data":
+        return "YOUR VITAL SIGN RESULT FOR TEMPERATURE: YOUR TEMPERATURE IS, 32, DEGREES CELSIUS, WHICH IS NORMAL. PRESS 1 TO GO BACK, AND THEN PRESS 3 TO GO TO CONVERSATIONAL AI.";
       default:
-        break;
+        return "";
     }
-
-    // Speak the content when the page changes
-    speakText(content);
-
-    // Cleanup the speech synthesis on unmount
-    return () => {
-      synth.cancel();
-    };
-  }, [pathname]);
+  };
 
   return (
-    <div style={{ width: 1280, height: 760 }}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/screen-6" element={<Screen6 />} />
-        <Route path="/screen-7" element={<Screen7 />} />
-        <Route path="/screen-5" element={<MainScreen1 />} />
-        <Route path="/screen-4" element={<MainScreen2 />} />
-        <Route path="/screen-3" element={<HealthScreen />} />
-        <Route path="/screen-2" element={<MainScreen3 />} />
-        <Route path="/screen-1" element={<MainScreen />} />
-        <Route path="/basic" element={<Basic />}/>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/selection" element={<Selection1 />} />
+      <Route path="/instruction" element={<Instruction />} />
+      <Route path="/temp-data" element={<TempData />} />
+      <Route path="/basic" element={<Basic />} />
+    </Routes>
   );
 }
 

@@ -1,0 +1,155 @@
+.screen-12 {
+  background-color: #fff;
+}
+.group-item,
+.screen-12,
+.screen-2-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  height: 600px;
+}
+.group-item {
+  border-radius: 50px;
+  background-color: #1e1e1e;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 616px;
+  height: 305px;
+}
+.please-put-your {
+  margin: 0;
+}
+.please-put-your-container {
+  position: absolute;
+  top: 25px;
+  left: calc(50% - 241px);
+  font-weight: 800;
+  display: inline-block;
+  width: 482.2px;
+  height: 130.1px;
+  text-shadow: 1px 0 0#000, 0 1px 0#000, -1px 0 0#000, 0-1px 0#000;
+}
+.rectangle-group {
+  position: absolute;
+  top: 132px;
+  left: 345px;
+  width: 616px;
+  height: 305px;
+  text-align: center;
+}
+.circle1,
+.instruction-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #353535;
+  width: 1024px;
+  height: 90px;
+}
+.circle1 {
+  border-radius: 50%;
+  background-color: #00b2ff;
+  width: 235px;
+  height: 235px;
+}
+.thermometer-icon1 {
+  position: absolute;
+  top: 23px;
+  left: 52px;
+  width: 131.1px;
+  height: 131.1px;
+  overflow: hidden;
+}
+.temperature1 {
+  position: absolute;
+  top: 154px;
+  left: 40px;
+  font-weight: 900;
+  display: inline-block;
+  width: 156px;
+  height: 26px;
+}
+.temp1 {
+  position: absolute;
+  top: 182px;
+  left: 46px;
+  width: 235px;
+  height: 235px;
+  font-size: 23.5px;
+  color: #000;
+}
+.home-press-4-container1 {
+  position: absolute;
+  top: 4px;
+  left: 57px;
+  display: inline-block;
+  width: 60px;
+  height: 37px;
+}
+.vector-icon1 {
+  position: absolute;
+  height: 100%;
+  width: 38.46%;
+  top: 0;
+  right: 61.54%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.home-press-4-group {
+  position: absolute;
+  top: 21px;
+  left: 882px;
+  width: 117px;
+  height: 45.6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #d7d7d7;
+}
+.instruction-item {
+  position: absolute;
+  top: 474px;
+  left: 11px;
+  width: 90px;
+  height: 125px;
+  object-fit: contain;
+  cursor: pointer;
+}
+.speech-language-therapy-icon2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+.health-kiosk2 {
+  position: absolute;
+  top: 17px;
+  left: 94px;
+  font-weight: 900;
+  display: inline-block;
+  width: 235px;
+  height: 44px;
+}
+.speech-language-therapy-container {
+  position: absolute;
+  top: 4px;
+  left: 46px;
+  width: 329px;
+  height: 80px;
+  font-size: 36px;
+}
+.instruction {
+  width: 100%;
+  position: relative;
+  height: 600px;
+  text-align: left;
+  font-size: 32px;
+  color: #fff;
+  font-family: Inter;
+}
