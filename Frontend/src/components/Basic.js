@@ -40,12 +40,12 @@ function Basic() {
         'charset': 'UTF-8',
       },
       credentials: "same-origin",
-      body: JSON.stringify({ "sender": name, "message": msg }),
+      body: JSON.stringify({ "sender": name, "msg": msg }),
     })
       .then(response => response.json())
       .then((response) => {
         if (response) {
-          const recipient_msg = response["response"];
+          const recipient_msg = response;
           const response_temp = { sender: "bot", msg: recipient_msg };
           setBotTyping(false);
           setChat(chat => [...chat, response_temp]);
