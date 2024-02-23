@@ -2,17 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { IoIosMic, IoMdSend } from 'react-icons/io';
 import { BiBot, BiUser } from 'react-icons/bi';
 import './Conversation.css';
+import { useNavigate } from 'react-router-dom';
 
 function Conversation() {
   const [chat, setChat] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [botTyping, setBotTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
-
-  useEffect(() => {
-    const objDiv = document.getElementById('messageArea');
-    objDiv.scrollTop = objDiv.scrollHeight;
-  }, [chat]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
@@ -41,11 +38,15 @@ function Conversation() {
         }
       };
 
-      document.getElementById('voiceBtn').addEventListener('click', handleVoiceButtonClick);
+      const voiceBtn = document.getElementById('voiceBtn');
+      if (voiceBtn) {
+        voiceBtn.addEventListener('click', handleVoiceButtonClick);
+      }
 
       return () => {
-        recognition.stop();
-        document.getElementById('voiceBtn').removeEventListener('click', handleVoiceButtonClick);
+        if (voiceBtn) {
+          voiceBtn.removeEventListener('click', handleVoiceButtonClick);
+        }
       };
     } else {
       console.error('Speech recognition not supported');
@@ -89,6 +90,24 @@ function Conversation() {
       })
   }
 
+  const onGroupContainer1Click = () => {
+    navigate('/');
+  };
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === '4') {
+        navigate('/');
+      }
+    };
+
+    window.addEventListener('keypress', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keypress', handleKeyPress);
+    };
+  }, [navigate]);
+
   return (
     <div>
       <div className='Titlecontainer' style={{ width: '100%', margin: 'auto', boxSizing: 'border-box' }}>
@@ -104,7 +123,7 @@ function Conversation() {
             <div className="cardHeader" style={styleHeader}>
               <h2 style={{ textAlign: 'center' }}>Health Companion</h2>
               {botTyping ? <h6 style={{ color: 'black' }}>Waiting for response..</h6> : null}
-              {isListening ? <p style={{ color: 'blue', fontFamily: 'Your Font Name' }}>Listening...</p> : null} {/* Notice for listening */}
+              {isListening ? <p style={{ color: 'black', fontFamily: 'Helvetica' }}>Listening...</p> : null} {/* Notice for listening */}
             </div>
             <div className="cardBody" id="messageArea" style={styleBody}>
               <div className="row msgarea">
@@ -139,6 +158,13 @@ function Conversation() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* Add the buttons here */}
+      <div className="group-div" onClick={onGroupContainer1Click}>
+        <div className="home-press-4-container2">
+          <p className="p">Home</p>
+          <p className="p">Press 4</p>
         </div>
       </div>
     </div>
